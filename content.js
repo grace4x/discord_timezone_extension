@@ -25,7 +25,7 @@ function processTimezone(timezone, timestampMessage){
   const ampm = timestampMessage.substring(ind + 4, ind + 6);
 
   var currTime = hours + minutes / 60;
-  if (ampm === "PM"){
+  if (ampm === "PM" && hours != 12){
     currTime += 12;
   }else if (ampm === "AM" && hours == 12){
     currTime -= 12;
