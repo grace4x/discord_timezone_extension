@@ -64,7 +64,9 @@ function processTimezone(timezone, timestampMessage){
       }else{
         if (theirTime >= 48){
           finalMessage = "Tomorrow, ";
-        } //today is just default
+        } else {
+          finalMessage = "Today, ";
+        }
       }
     }else{
       if (theirTime < 0){
