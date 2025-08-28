@@ -96,7 +96,7 @@ function processTimezone(timezone, timestampMessage){
   var theirHours = Math.floor(theirTime);
   const theirMinutes = (Math.round((theirTime - theirHours) * 60)).toString().padStart(2, "0");
   var theirAmpm = "AM"
-  if (theirHours >= 12){
+  if (theirHours > 12){
     theirAmpm = "PM";
     theirHours -= 12;
   }else if (theirHours == 0){
