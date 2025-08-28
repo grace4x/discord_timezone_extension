@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Timezone Headers",
+  "version": "1.0",
+  "description": "Adds custom timestamps to your friends' Discord messages",
+  "icons": {
+    "128": "icon.png",
+    "48": "icon.png",
+    "16": "icon.png"
+  },
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://discord.com/*"],
+  "action": {
+    "default_popup": "popup.html"    
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
